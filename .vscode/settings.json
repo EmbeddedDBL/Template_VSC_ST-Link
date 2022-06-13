@@ -1,0 +1,14 @@
+{
+    "cmake.configureOnOpen": false,
+    "SetNameExecuteBuildFile": "Template_STM32F401",
+    "SetOpecOcdInterface": "stlink-v2-1.cfg",
+    "SetOpenOcdNucleoARM": "stm32f4x",
+    "SetDeviceARM": "STM32F401RE",
+    "SetNameSVDFile":"STM32F401.svd",
+    "SetPathToolchainARM": "C:/Program Files (x86)/GNU Arm Embedded Toolchain/10 2021.10/bin",
+    "SetPathOpenOCD": "C:/openocd-v0.11.0/bin/openocd.exe",
+    "files.associations": {
+        "stm32f4xx.h": "c",
+        "stm32f4xx_hal_conf.h": "c"
+    }
+}

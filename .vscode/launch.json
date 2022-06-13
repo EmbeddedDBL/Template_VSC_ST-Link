@@ -1,0 +1,28 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "Cortex Debug",
+          "cwd": "${workspaceRoot}",
+          "executable": "./build/${config:SetNameExecuteBuildFile}.elf",
+          "request": "launch",
+          "type": "cortex-debug",
+          "servertype": "openocd",
+          "configFiles": [
+              "interface/${config:SetOpecOcdInterface}",
+              "target/${config:SetOpenOcdNucleoARM}.cfg"
+          ],
+          "interface": "swd",
+          "serverpath": "${config:SetPathOpenOCD}",
+          "armToolchainPath": "${config:SetPathToolchainARM}",
+          "svdFile": "${workspaceRoot}/Device/svd/${config:SetNameSVDFile}",
+          "debuggerArgs": [
+              "-iex","set auto-load safe-path /",
+          ],
+          "runToEntryPoint": "main"
+      }
+  ]
+}
